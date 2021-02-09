@@ -2,11 +2,11 @@
 
 ### `Blij [Dutch, adj] meaning, having a feeling of happiness or joy.`
 
-## <div align="left" style='color: #b0371c'> Description
+## <div align="left" style='color: #b0371c'> Description</div>
 
 <p>This app, intendeds to bring a joyous experience of searching vast varieties of art throughout The MET collection. Users will be indulged in not only the simplicity of the UI design, but also the extensive information provided from the various endpoints. This app can suffice for a museum guide for all departments ranging from Egypt to renaissance.</p>
  
-## <div align="left" style='color: #b0371c'> App Features
+## <div align="left" style='color: #b0371c'> App Features</div>
 
 > - searchable art
 >   - ID ( useful when in museum)
@@ -31,3 +31,18 @@
 >   - year / century (creation date)
 >   - Medium (materials used in creating the piece)
 >   - country of origin
+
+## <div align="left" style='color: #b0371c'> API </div>
+| API | Description |
+| --- | --- |
+|The Met | Access to The Met’s Open Access data and high resolution images|
+<br>
+> ## <div align="left" style='color: #b0371c'> MVP </div>
+>
+> _Simplistic search of art for the users._
+> - Goal: To *obtain the _MVP_* in a functional app / webpage.
+
+> ## <div align="left" style='color: #b0371c'> 🔮 Post-MVP 🔮 </div>
+>
+> Location feature: component dedicated to only showing the locations of the different Met locations. _i.e The Met, The Met Cloisters_ 
+
