@@ -33,16 +33,17 @@
 >   - country of origin
 
 ## <div align="left" style='color: #b0371c'> API </div>
-| API | Description |
-| --- | --- |
-|The Met | Access to The Met’s Open Access data and high resolution images|
-<br>
+
+| API     | Description                                                     |
+| ------- | --------------------------------------------------------------- |
+| The Met | Access to The Met’s Open Access data and high resolution images |
+
 > ## <div align="left" style='color: #b0371c'> MVP </div>
 >
 > _Simplistic search of art for the users._
-> - Goal: To *obtain the _MVP_* in a functional app / webpage.
+>
+> - Goal: To _obtain the *MVP*_ in a functional app / webpage.
 
 > ## <div align="left" style='color: #b0371c'> 🔮 Post-MVP 🔮 </div>
 >
-> Location feature: component dedicated to only showing the locations of the different Met locations. _i.e The Met, The Met Cloisters_ 
-
+> Location feature: component dedicated to only showing the locations of the different Met locations. _i.e The Met, The Met Cloisters_
