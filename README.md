@@ -1,4 +1,4 @@
-# <div align="center">![blij logo](src/images/logos/blij-logo.svg)Simple Art Search</div>
+# <div align="left">![blij logo](src/images/logos/blij-logo.svg)Simple Art Search </div>
 
 ### `Blij [Dutch, adj] meaning, having a feeling of happiness or joy.`
 
@@ -37,15 +37,13 @@
 [App concept from figma](https://www.figma.com/file/BfC5C6mooGmLaFA9xyI6Bm/Team-Blij-Style-Guide?node-id=120%3A3)
 
 
-
-
-## <div align="left" style='color: #b0371c'> API </div>
+## <div align="left" style='color: #b0371c'> 🖇 API 🖇 </div>
 
 | API                                                                        | Description                                                     |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | [![MET logo](src/images/logos/met-logo.png)](https://metmuseum.github.io/) | Access to The Met’s Open Access data and high resolution images |
 
-## <div align="left" style='color: #b0371c'> MVP </div>
+## <div align="left" style='color: #b0371c'> 🏛 MVP 🏛</div>
 >
 > _Simplistic search of art for the users._
 >
