@@ -33,18 +33,24 @@
 >   - Medium (materials used in creating the piece)
 >   - country of origin
 
+## <div align="left" style='color: #b0371c'> 👩🏽‍🎨 Wireframing 👩🏽‍🎨 </div>
+[App concept from figma](https://www.figma.com/file/BfC5C6mooGmLaFA9xyI6Bm/Team-Blij-Style-Guide?node-id=120%3A3)
+
+
+
+
 ## <div align="left" style='color: #b0371c'> API </div>
 
-| API     | Description                                                     |
-| ------- | --------------------------------------------------------------- |
-| The Met | Access to The Met’s Open Access data and high resolution images |
+| API                                                                        | Description                                                     |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| [![MET logo](src/images/logos/met-logo.png)](https://metmuseum.github.io/) | Access to The Met’s Open Access data and high resolution images |
 
-> ## <div align="left" style='color: #b0371c'> MVP </div>
+## <div align="left" style='color: #b0371c'> MVP </div>
 >
 > _Simplistic search of art for the users._
 >
 > - Goal: To _obtain the *MVP*_ in a functional app / webpage.
 
-> ## <div align="left" style='color: #b0371c'> 🔮 Post-MVP 🔮 </div>
+## <div align="left" style='color: #b0371c'> 🔮 Post-MVP 🔮 </div>
 >
 > Location feature: component dedicated to only showing the locations of the different Met locations. _i.e The Met, The Met Cloisters_
