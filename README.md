@@ -37,6 +37,15 @@
 [App concept from figma](https://www.figma.com/file/BfC5C6mooGmLaFA9xyI6Bm/Team-Blij-Style-Guide?node-id=120%3A3)
 
 
+## <div align="left" style='color: #b0371c'> 🧩 Component Hierarchy 🧩 </div>
+[App component hierarchy from whimsical](https://whimsical.com/blij-9YTmT3Mox4Fjb5xV6g6fTF)
+
+| ![component hierarchy](src/images/Wireframing_and_maping/blij-component-map.png) |
+| -------------------------------------------------------------------------------- |
+| component hierarchy                                                              |
+
+
+
 ## <div align="left" style='color: #b0371c'> 🖇 API 🖇 </div>
 
 | API                                                                        | Description                                                     |
