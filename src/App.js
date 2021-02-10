@@ -1,6 +1,8 @@
 import "./App.css";
 import axios from "axios";
-import { Route, NavLink, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Header from "./componentScreens/Header";
+import Footer from "./componentScreens/Footer";
 
 function App() {
   return (
@@ -24,8 +26,10 @@ function App() {
           />
           <Route exact path="/ArtView" component={ArtView} />
           <Route exact path="/ViewArt" component={ViewArt} />
+          <Route exact path="*" component={ArtError} />
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 }
