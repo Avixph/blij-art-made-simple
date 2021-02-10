@@ -1,5 +1,6 @@
 import "./App.css";
-import axios from "axios";
+
+import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import Header from "./componentScreens/Header";
 import Home from "./componentScreens/Home";
@@ -16,29 +17,31 @@ import ArtError from "./componentScreens/ArtError";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/AboutUS" component={AboutUs} />
-          <Route exact path="/ArtMain" component={ArtMain} />
-          <Route exact path="/ViewPopularArt" component={ViewPopularArt} />
-          <Route exact path="/ArtDepartment" component={ArtDepartment} />
-          <Route
-            exact
-            path="/ArtDepartmentResults"
-            component={ArtDepartmentResults}
-          />
-          <Route
-            exact
-            path="/ArtDepartmentCollection"
-            component={ArtDepartmentCollection}
-          />
-          <Route exact path="/ViewArt" component={ViewArt} />
+      <Router>
+        <Header />
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/AboutUS" component={AboutUs} />
+            <Route exact path="/ArtMain" component={ArtMain} />
+            <Route exact path="/ViewPopularArt" component={ViewPopularArt} />
+            <Route exact path="/ArtDepartment" component={ArtDepartment} />
+            <Route
+              exact
+              path="/ArtDepartmentResults"
+              component={ArtDepartmentResults}
+            />
+            <Route
+              exact
+              path="/ArtDepartmentCollection"
+              component={ArtDepartmentCollection}
+            />
+            <Route exact path="/ViewArt" component={ViewArt} />
 
-          <Route exact path="*" component={ArtError} />
-        </Switch>
-      </main>
+            <Route exact path="*" component={ArtError} />
+          </Switch>
+        </main>
+      </Router>
       <Footer />
     </div>
   );
