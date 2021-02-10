@@ -1,4 +1,4 @@
-# <div align="left">![blij logo](src/images/logos/blij-logo-c.svg)Simple Art Search </div>
+# <div align="left">![blij logo](src/images/logos/blij-logo-c.svg)Art Made Simple </div>
 
 ### `Blij [Dutch, adj] meaning, having a feeling of happiness or joy.`
 
