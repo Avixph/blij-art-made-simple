@@ -5,15 +5,6 @@ import { Route, NavLink, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <div className="Navlink">
-        <nav>
-          <NavLink exact to={"/"}>
-            Home
-          </NavLink>
-          <NavLink to={"/ArtMain"}>Art</NavLink>
-          <NavLink to={"/AboutUs"}>About Us</NavLink>
-        </nav>
-      </div>
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
