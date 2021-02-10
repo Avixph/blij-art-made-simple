@@ -61,3 +61,10 @@
 ## <div align="left" style='color: #b0371c'> 🔮 Post-MVP 🔮 </div>
 >
 > Location feature: component dedicated to only showing the locations of the different Met locations. _i.e The Met, The Met Cloisters_
+
+## <div align="left" style='color: #b0371c'> 📠 Contact 📠</div>
+
+| Angel Fernandez                                                                                                                                                                   | Jennifer  Smith                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![LinkedIn](src/images/logos/linkedin-logo.svg)](https://www.linkedin.com/in/angelbienvenidofernandez/) [![GitHub](src/images/logos/github-logo.svg)](https://github.com/Avixph) | [![LinkedIn](src/images/logos/linkedin-logo.svg)](https://www.linkedin.com/in/jennifer-smith-14a8361b7/) [![GitHub](src/images/logos/github-logo.svg)](https://github.com/JenniferSmith007) |
+|                                                                                                                                                                                   |                                                                                                                                                                                             |
