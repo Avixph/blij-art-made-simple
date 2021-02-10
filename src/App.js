@@ -7,7 +7,6 @@ import Footer from "./componentScreens/Footer";
 function App() {
   return (
     <div className="App">
-      <Header />
       <main>
         <Switch>
           <Route exact path="/" component={Home} />

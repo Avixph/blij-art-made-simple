@@ -1,11 +1,10 @@
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos/blij-logo.svg";
-
 export default function Header() {
   return (
     <header className="Navlink">
       <h1>
-        <img src={logo} alt="blij" />
+        <img src={logo} alt="" />
       </h1>
       <nav>
         <NavLink exact to={"/"}>
