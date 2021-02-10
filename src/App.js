@@ -1,19 +1,13 @@
 import "./App.css";
 import axios from "axios";
-import { Route, NavLink, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Header from "./componentScreens/Header";
+import Footer from "./componentScreens/Footer";
 
 function App() {
   return (
     <div className="App">
-      <div className="Navlink">
-        <nav>
-          <NavLink exact to={"/"}>
-            Home
-          </NavLink>
-          <NavLink to={"/ArtMain"}>Art</NavLink>
-          <NavLink to={"/AboutUs"}>About Us</NavLink>
-        </nav>
-      </div>
+      <Header />
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -33,8 +27,10 @@ function App() {
           />
           <Route exact path="/ArtView" component={ArtView} />
           <Route exact path="/ViewArt" component={ViewArt} />
+          <Route exact path="*" component={ArtError} />
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 }
