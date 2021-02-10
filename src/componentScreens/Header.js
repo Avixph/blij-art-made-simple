@@ -7,11 +7,19 @@ export default function Header() {
         <img src={logo} alt="" />
       </h1>
       <nav>
-        <NavLink exact to={"/"}>
-          Home
-        </NavLink>
-        <NavLink to={"/ArtMain"}>Art</NavLink>
-        <NavLink to={"/AboutUs"}>About Us</NavLink>
+        <ul>
+          <li>
+            <NavLink exact to={"/"}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/ArtMain"}>Art</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/AboutUs"}>About Us</NavLink>
+          </li>
+        </ul>
       </nav>
     </header>
   );
