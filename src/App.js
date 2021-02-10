@@ -2,11 +2,21 @@ import "./App.css";
 import axios from "axios";
 import { Route, Switch } from "react-router-dom";
 import Header from "./componentScreens/Header";
+import Home from "./componentScreens/Home";
+import AboutUs from "./componentScreens/Home";
+import ArtMain from "./componentScreens/ArtMain";
+import ViewPopularArt from "./components/ViewPopularArt";
+import ArtDepartment from "./componentScreens/ArtDepartment";
+import ArtDepartmentResults from "./components/ArtDepartmentResults";
+import ArtDepartmentCollection from "./components/ArtDepartmentCollection";
+import ViewArt from "./components/ViewArt";
 import Footer from "./componentScreens/Footer";
+import ArtError from "./componentScreens/ArtError";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -24,8 +34,8 @@ function App() {
             path="/ArtDepartmentCollection"
             component={ArtDepartmentCollection}
           />
-          <Route exact path="/ArtView" component={ArtView} />
           <Route exact path="/ViewArt" component={ViewArt} />
+
           <Route exact path="*" component={ArtError} />
         </Switch>
       </main>
