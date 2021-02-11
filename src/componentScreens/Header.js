@@ -14,10 +14,10 @@ export default function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/ArtMain"}>Art</NavLink>
+            <NavLink to={"/art"}>Art</NavLink>
           </li>
           <li>
-            <NavLink to={"/AboutUs"}>About Us</NavLink>
+            <NavLink to={"/aboutUs"}>About Us</NavLink>
           </li>
         </ul>
       </nav>

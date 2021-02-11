@@ -13,7 +13,7 @@ export default function artDeptReducers(state = initialState, action) {
     case actions.Get_ArtDept_Success:
       return { artDept: action.payload, loading: false, pageError: false };
     case actions.Get_ArtDept_Fail:
-      return { ...state, loadig: false, pageError: true };
+      return { ...state, loading: false, pageError: true };
 
     default:
       return state;

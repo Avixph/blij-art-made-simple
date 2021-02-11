@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 
 export default function ArtMain() {
   const dispatch = useDispatch();
-  
+
   return (
     <main className="Art-Main">
       <h1>Angel</h1>
@@ -14,6 +14,7 @@ export default function ArtMain() {
       <NavLink to="/artDepartments" className="button">
         yoooooooooooo
       </NavLink>
+
       <button onClick={() => dispatch(fetchDepartments())}>yoo</button>
     </main>
   );
