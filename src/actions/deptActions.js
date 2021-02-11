@@ -18,9 +18,10 @@ export const getArtDeptFail = () => ({
   type: Get_ArtDept_Fail,
 });
 
-export const fetchDepartments = async () => {
+export const fetchDepartments = () => {
   const departmentAPI = `${MET_URL}/public/collection/v1/departments`;
   console.log(departmentAPI);
+
   // const departmentData = await axios.get(departmentAPI).then(({ data }) => {
   //   return data;
   // });
@@ -30,7 +31,7 @@ export const fetchDepartments = async () => {
     try {
       const response = await axios.get(departmentAPI);
 
-      const { data } = response.departments;
+      const { data } = response;
       console.log(data);
       dispatch(getArtDeptSuccess(data));
     } catch (error) {
