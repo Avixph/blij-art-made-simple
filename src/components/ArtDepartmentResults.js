@@ -1,7 +1,8 @@
-function ArtDepartmentResults({ data }) {
+function ArtDepartmentResults({ displayName, departmentId }) {
   return (
     <div className="department-view">
-      <h2>department name:{data.departments.displayName}</h2>
+      <h3>department #: {departmentId}</h3>
+      <h2>department name:{displayName}</h2>
     </div>
   );
 }

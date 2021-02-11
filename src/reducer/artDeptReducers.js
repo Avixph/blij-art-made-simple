@@ -8,11 +8,11 @@ export const initialState = {
 
 export default function artDeptReducers(state = initialState, action) {
   switch (action.type) {
-    case actions.Get_ArtDept:
+    case actions.GET_ARTDEPT:
       return { ...state, loading: true };
-    case actions.Get_ArtDept_Success:
+    case actions.GET_ARTDEPT_SUCCESS:
       return { artDept: action.payload, loading: false, pageError: false };
-    case actions.Get_ArtDept_Fail:
+    case actions.GET_ARTDEPT_FAIL:
       return { ...state, loading: false, pageError: true };
 
     default:

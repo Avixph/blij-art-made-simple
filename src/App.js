@@ -12,7 +12,7 @@ import ArtDepartmentResults from "./components/ArtDepartmentResults";
 import ArtDepartmentCollection from "./components/ArtDepartmentCollection";
 import ViewArt from "./components/ViewArt";
 import Footer from "./componentScreens/Footer";
-import ArtError from "./componentScreens/ArtError";
+// import ArtError from "./componentScreens/ArtError";
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
             />
             <Route exact path="/ViewArt" component={ViewArt} />
 
-            <Route exact path="*" component={ArtError} />
+            {/* <Route exact path="*" component={ArtError} /> */}
           </Switch>
         </main>
       </Router>

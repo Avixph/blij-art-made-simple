@@ -4,7 +4,7 @@ export default function Footer() {
       <h2>
         Blij
         <br />
-        Made with ❤️ 2021
+        Made with <br /> ♥︎2021
       </h2>
     </footer>
   );

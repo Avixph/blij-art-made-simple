@@ -15,8 +15,8 @@ const ArtDepartment = ({ dispatch, loading, artDept, pageError }) => {
     if (pageError) {
       return <p> errrrorrr wrong way </p>;
     }
-    return artDept.map((data, index) => {
-      return <ArtDepartmentResults key={index} data={data} />;
+    return artDept.map((dept) => {
+      return <ArtDepartmentResults key={dept.departmentId} {...dept} />;
     });
   };
 

@@ -12,10 +12,10 @@ export default function ArtMain() {
         View Departments
   </NavLink>} */}
       <NavLink to="/artDepartments" className="button">
-        yoooooooooooo
+        <button type="button">
+          View <br /> Departments
+        </button>
       </NavLink>
-
-      <button onClick={() => dispatch(fetchDepartments())}>yoo</button>
     </main>
   );
 }
