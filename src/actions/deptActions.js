@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import { MET_URL } from "./constants";
 
 export const Get_ArtDept = `Get_ArtDept`;
@@ -9,17 +9,18 @@ export const getArtDept = () => ({
   type: Get_ArtDept,
 });
 
-export const getArtDeptSuccess = () => ({
+export const getArtDeptSuccess = (artDept) => ({
   type: Get_ArtDept_Success,
   payload: artDept,
 });
 
 export const getArtDeptFail = () => ({
-  type: Get_ArtDeptFail,
+  type: Get_ArtDept_Fail,
 });
 
-export const departmentInfo = async () => {
-  departmentAPI = `${MET_URL}/public/collection/v1/departments`;
+export const fetchDepartments = async () => {
+  const departmentAPI = `${MET_URL}/public/collection/v1/departments`;
+  console.log(departmentAPI);
   // const departmentData = await axios.get(departmentAPI).then(({ data }) => {
   //   return data;
   // });
@@ -27,8 +28,10 @@ export const departmentInfo = async () => {
   return async (dispatch) => {
     dispatch(getArtDept());
     try {
-      const response = await fetch(departmentAPI);
-      const data = await response.json();
+      const response = await axios.get(departmentAPI);
+
+      const { data } = response.departments;
+      console.log(data);
       dispatch(getArtDeptSuccess(data));
     } catch (error) {
       dispatch(getArtDeptFail());
