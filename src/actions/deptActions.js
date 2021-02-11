@@ -1,21 +1,21 @@
 import axios from "axios";
 import { MET_URL } from "./constants";
 
-export const Get_ArtDept = `Get_ArtDept`;
-export const Get_ArtDept_Success = `Get_ArtDept_Success`;
-export const Get_ArtDept_Fail = `Get_ArtDept_Fail`;
+export const GET_ARTDEPT = `GET_ARTDEPT`;
+export const GET_ARTDEPT_SUCCESS = `GET_ARTDEPT_SUCCESS`;
+export const GET_ARTDEPT_FAIL = `GET_ARTDEPT_FAIL`;
 
 export const getArtDept = () => ({
-  type: Get_ArtDept,
+  type: GET_ARTDEPT,
 });
 
 export const getArtDeptSuccess = (artDept) => ({
-  type: Get_ArtDept_Success,
+  type: GET_ARTDEPT_SUCCESS,
   payload: artDept,
 });
 
 export const getArtDeptFail = () => ({
-  type: Get_ArtDept_Fail,
+  type: GET_ARTDEPT_FAIL,
 });
 
 export const fetchDepartments = () => {
@@ -32,7 +32,7 @@ export const fetchDepartments = () => {
 
       const { data } = response;
 
-      dispatch(getArtDeptSuccess(data));
+      dispatch(getArtDeptSuccess(data.departments));
       console.log(data.departments);
     } catch (error) {
       dispatch(getArtDeptFail());
