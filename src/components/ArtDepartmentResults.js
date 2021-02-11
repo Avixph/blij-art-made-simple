@@ -1,9 +1,7 @@
-function ArtDepartmentResults({ artDepts }) {
-  console.log(artDepts);
+function ArtDepartmentResults({ data }) {
   return (
     <div className="department-view">
-      <h1>department #:{artDepts.departmentId}</h1>
-      <h2>department name:{artDepts.displayName}</h2>
+      <h2>department name:{data.departments.displayName}</h2>
     </div>
   );
 }

@@ -13,10 +13,11 @@ const ArtDepartment = ({ dispatch, loading, artDept, pageError }) => {
       return <p>Loading Departmants...</p>;
     }
     if (pageError) {
-      return artDept.map((artDepts, index) => {
-        <ArtDepartmentResults {...artDepts} key={index} />;
-      });
+      return <p> errrrorrr wrong way </p>;
     }
+    return artDept.map((data, index) => {
+      return <ArtDepartmentResults key={index} data={data} />;
+    });
   };
 
   return (

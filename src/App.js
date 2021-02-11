@@ -22,10 +22,10 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/AboutUS" component={AboutUs} />
-            <Route exact path="/ArtMain" component={ArtMain} />
-            <Route exact path="/ViewPopularArt" component={ViewPopularArt} />
-            <Route exact path="/ArtDepartment" component={ArtDepartment} />
+            <Route exact path="/aboutUS" component={AboutUs} />
+            <Route exact path="/art" component={ArtMain} />
+            <Route exact path="/viewPopularArt" component={ViewPopularArt} />
+            <Route exact path="/artDepartments" component={ArtDepartment} />
             <Route
               exact
               path="/ArtDepartmentResults"
