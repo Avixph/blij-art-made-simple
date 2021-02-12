@@ -19,14 +19,14 @@ export const getArtSearchFail = () => ({
 });
 
 export const fetchArtSearch = () => {
-  const artSearchAPI = `${MET_URL}/public/collection/v1/search?hasImages=true&q=`; //${artSearch}
+  const artSearchAPI = `${MET_URL}/public/collection/v1/search?hasImages=true&q=cat`;
   return async (dispatch) => {
     dispatch(getArtSearch());
     try {
       const response = await axios.get(artSearchAPI);
       const { data } = response;
-      dispatch(getArtSearchSuccess(data));
-      console.log(data.objectIDs);
+      dispatch(getArtSearchSuccess(data.objectIDs));
+      console.log(data);
     } catch (error) {
       dispatch(getArtSearchFail());
     }
