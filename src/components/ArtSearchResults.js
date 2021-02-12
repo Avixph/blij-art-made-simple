@@ -12,19 +12,17 @@ export default function ArtSearchResults({ objectIDs }) {
   };
   useEffect(() => {
     fetchArtInfo();
-  }, []);
+  }, [objectIDs]);
 
   return (
     <div className="ArtSearch">
-      <img
+      {/* <img
         src={artPiece.primaryImage ? artPiece.primaryImage : "no Image"}
         alt=""
-      />
+      /> */}
+      <img src={artPiece.primaryImage} alt="" />
       <h3>{artPiece.objectName}</h3>
       <h5>{artPiece.artistDisplayName}</h5>
-      <h5>
-        {artPiece.objectBeginDate} - {artPiece.objectEndDate}
-      </h5>
       <NavLink
         to={{
           pathname: "/artDetail",
@@ -32,6 +30,14 @@ export default function ArtSearchResults({ objectIDs }) {
             image: artPiece.primaryImage,
             name: artPiece.objectName,
             artist: artPiece.artistDisplayName,
+            startDate: artPiece.objectBeginDate,
+            endDate: artPiece.objectEndDate,
+            medium: artPiece.medium,
+            dimensions: artPiece.dimensions,
+            department: artPiece.department,
+            repository: artPiece.repository,
+            URL: artPiece.objectURL,
+            galleryNumber: artPiece.GalleryNumber,
           },
         }}
       >
