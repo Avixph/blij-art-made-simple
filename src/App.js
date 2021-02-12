@@ -10,6 +10,7 @@ import ViewPopularArt from "./components/ViewPopularArt";
 import ArtDepartment from "./componentScreens/ArtDepartment";
 import ArtDepartmentResults from "./components/ArtDepartmentResults";
 import ArtDepartmentCollection from "./components/ArtDepartmentCollection";
+
 import ViewArt from "./components/ViewArt";
 import Footer from "./componentScreens/Footer";
 // import ArtError from "./componentScreens/ArtError";
