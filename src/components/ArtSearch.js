@@ -1,39 +1,24 @@
-import { connect } from "react-redux";
-import { useEffect } from "react";
-import { fetchArtSearch } from "../actions/srchActions";
-import ArtSearchResults from "../components/ArtSearchResults";
-const ArtSearch = ({ dispatch, loading, artSearch, pageError }) => {
-  useEffect(() => {
-    dispatch(fetchArtSearch());
-  }, [dispatch]);
-  const renderArtSearch = () => {
-    if (loading) {
-      return <p> Loading Search</p>;
-    }
-    if (pageError) {
-      return <p> Error wrong way </p>;
-    }
-    return artSearch.map((search) => {
-      return <ArtSearchResults key={search.objectIDs} {...search} />;
-    });
+import { fetchArtByQuery } from "../services/fetchArt";
+import { useState } from "react";
+
+export default function ArtSearch({ searchArt, setSearchArt }) {
+  const [search, setSearch] = useState("");
+
+  const handleSearchInput = (event) => {
+    setSearch(event.target.value);
   };
-return (
+
+  return (
     <div>
-      <form>
-        <input
-          placeholder="Search for..."
-          onChange={(event) => search.callback(event.target.value)}
-        />
-        <button onClick={renderArtSearch}>yer</button>
-        {renderArtSearch()}
-      </form>
+      <input onChange={handleSearchInput} placeholder="search for art" />
+      <button
+        onClick={async () => {
+          const data = await fetchArtByQuery(search);
+          setSearchArt([...searchArt, data]);
+        }}
+      >
+        SEARCH
+      </button>
     </div>
   );
-};
-
-const mapStateToProps = (state) => ({
-  loading: state.artSearch.loading,
-  artSearch: state.artSearch.artSearch,
-  pageError: state.artSearch.pageError,
-});
-export default connect(mapStateToProps)(ArtSearch);
+}

@@ -13,7 +13,9 @@ const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );
-
+store.subscribe(() => {
+  console.log(store.getState());
+});
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { MET_URL } from "./constants";
+import { MET_URL } from "../services/constants";
 
 export const GET_ARTDEPT = `GET_ARTDEPT`;
 export const GET_ARTDEPT_SUCCESS = `GET_ARTDEPT_SUCCESS`;
