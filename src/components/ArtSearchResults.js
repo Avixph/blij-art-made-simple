@@ -10,8 +10,8 @@ export default function ArtSearchResults({ objectIDs }) {
     setArtPiece(data);
     console.log(data);
   };
-  useEffect((objectIDs) => {
-    fetchArtInfo(objectIDs);
+  useEffect(() => {
+    fetchArtInfo();
   }, []);
 
   return (
@@ -22,6 +22,9 @@ export default function ArtSearchResults({ objectIDs }) {
       />
       <h3>{artPiece.objectName}</h3>
       <h5>{artPiece.artistDisplayName}</h5>
+      <h5>
+        {artPiece.objectBeginDate} - {artPiece.objectEndDate}
+      </h5>
       <NavLink
         to={{
           pathname: "/artDetail",
