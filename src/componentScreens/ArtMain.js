@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
-// import { fetchDepartments } from "../actions/deptActions";
-import { useDispatch } from "react-redux";
 import ArtSearch from "../components/ArtSearch";
 import { useState } from "react";
 import ArtSearchResults from "../components/ArtSearchResults";
+
 export default function ArtMain() {
-  const dispatch = useDispatch();
   const [searchArt, setSearchArt] = useState([]);
 
   return (

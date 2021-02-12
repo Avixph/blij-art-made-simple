@@ -1,13 +1,19 @@
-import { connect } from "react-redux";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchDepartments } from "../actions/deptActions";
 import ArtDepartmentResults from "../components/ArtDepartmentResults";
 
-const ArtDepartment = ({ dispatch, loading, artDept, pageError }) => {
+export default function ArtDepartment() {
+  const dispatch = useDispatch();
+
+  const { loading, artDept, pageError } = useSelector((state) => {
+    return state.artDept;
+  });
+
   useEffect(() => {
     dispatch(fetchDepartments());
   }, [dispatch]);
-  //put useState in
+
   const renderDepartments = () => {
     if (loading) {
       return <p>Loading Departmants...</p>;
@@ -26,11 +32,4 @@ const ArtDepartment = ({ dispatch, loading, artDept, pageError }) => {
       {renderDepartments()}
     </section>
   );
-};
-
-const mapStateToProps = (state) => ({
-  loading: state.artDept.loading,
-  artDept: state.artDept.artDept,
-  pageError: state.artDept.pageError,
-});
-export default connect(mapStateToProps)(ArtDepartment);
+}

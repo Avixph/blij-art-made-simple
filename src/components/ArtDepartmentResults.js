@@ -1,10 +1,8 @@
-function ArtDepartmentResults({ displayName, departmentId }) {
+export default function ArtDepartmentResults({ displayName, departmentId }) {
   return (
     <div className="department-view">
-      <h3>department #: {departmentId}</h3>
-      <h2>department name:{displayName}</h2>
+      <h3>department - {departmentId}</h3>
+      <h2>{displayName}</h2>
     </div>
   );
 }
-
-export default ArtDepartmentResults;
