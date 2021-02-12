@@ -21,10 +21,6 @@ export const getArtDeptFail = () => ({
 export const fetchDepartments = () => {
   const departmentAPI = `${MET_URL}/public/collection/v1/departments`;
 
-  // const departmentData = await axios.get(departmentAPI).then(({ data }) => {
-  //   return data;
-  // });
-  // return departmentData;
   return async (dispatch) => {
     dispatch(getArtDept());
     try {
