@@ -1,3 +1,3 @@
-export default function ArtSearchResults() {
-  return <div></div>;
+function ArtSearchResults({ artSearch }) {
+  return <div className="ArtSearch">{artSearch}</div>;
 }
