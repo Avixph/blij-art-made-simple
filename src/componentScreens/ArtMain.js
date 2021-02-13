@@ -5,19 +5,24 @@ import ArtSearchResults from "../components/ArtSearchResults";
 
 export default function ArtMain() {
   const [searchArt, setSearchArt] = useState([]);
-
+  console.log(searchArt);
   return (
     <main className="Art-Main">
-      <NavLink to="/artDepartments" className="button">
+      <NavLink to="/art/artDepartments" className="button">
         <button type="button">
           View <br /> Departments
         </button>
       </NavLink>
 
-      <ArtSearch searchArt={searchArt} setSearchArt={setSearchArt} />
-      {searchArt.map((art, index) => {
-        return <ArtSearchResults {...art} key={index} />;
-      })}
+      <ArtSearch setSearchArt={setSearchArt} />
+      {/* {searchArt.map((art, index) => {
+        return (
+          <div>
+            <h1>text</h1>
+            <ArtSearchResults {...art} key={index} />
+          </div>
+        );
+      })} */}
     </main>
   );
 }
