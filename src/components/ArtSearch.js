@@ -1,34 +1,33 @@
+import { fetchArtByQuery } from "../services/fetchArt";
 import { useState } from "react";
-import ArtSearchResults from "./ArtSearchResults";
-import { MET_URL } from "../services/constants";
 
-function ArtSearch() {
-  const [artSearchResult, setArtSearchResult] = useState([]);
+export default function ArtSearch({ setSearchArt }) {
+  const [search, setSearch] = useState("");
 
-  const fetchArtSearchResults = async () => {
-    try {
-      const response = await fetch(
-        `${MET_URL}/public/collection/v1/search?hasImages=true&q=cat`
-      );
-      const artSearchResult = await response.json();
-      console.log(artSearchResult);
-      setArtSearchResult(artSearchResult.artSearchResult);
-    } catch (error) {
-      console.log(error);
-    }
+  const handleSearchInput = (event) => {
+    setSearch(event.target.value);
   };
-  if (artSearchResult) {
-    return (
-      <div>
-        <h3>no art pieces </h3>
-        <button onClick={() => fetchArtSearchResults()}>yo</button>
-      </div>
-    );
-  }
+
+  const handleSearchSubmit = async (event) => {
+    event.preventDefault();
+    const data = await fetchArtByQuery(search);
+    console.log(data.objectIDs);
+    setSearchArt(data.objectIDs);
+    setSearch("");
+  };
+
   return (
     <div>
-      <ArtSearchResults artSearchResult={artSearchResult} />
+      <form>
+        <input
+          value={search}
+          onChange={handleSearchInput}
+          placeholder="search for art"
+        />
+        <button type="submit" onClick={handleSearchSubmit}>
+          SEARCH
+        </button>
+      </form>
     </div>
   );
 }
-export default ArtSearch;
