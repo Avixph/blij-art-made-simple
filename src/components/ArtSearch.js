@@ -8,18 +8,11 @@ export default function ArtSearch({ setSearchArt }) {
     setSearch(event.target.value);
   };
 
-  // const fetchSearchResult = async () => {
-  //   const data = await fetchArtByQuery(search);
-  //   console.log(data);
-  //   setSearchArt([...searchArt, data]);
-  // };
-
-  //https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=
   const handleSearchSubmit = async (event) => {
     event.preventDefault();
     const data = await fetchArtByQuery(search);
     console.log(data.objectIDs);
-    setSearchArt(data.obejectIDs);
+    setSearchArt(data.objectIDs);
     setSearch("");
   };
 

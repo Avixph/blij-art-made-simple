@@ -15,14 +15,14 @@ export default function ArtMain() {
       </NavLink>
 
       <ArtSearch setSearchArt={setSearchArt} />
-      {/* {searchArt.map((art, index) => {
+      {searchArt.map((art, index) => {
         return (
           <div>
-            <h1>text</h1>
-            <ArtSearchResults {...art} key={index} />
+            {/* <h1>{art}</h1> */}
+            <ArtSearchResults objectIDs={art} key={index} />
           </div>
         );
-      })} */}
+      })}
     </main>
   );
 }
