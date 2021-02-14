@@ -21,8 +21,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/aboutUS" component={AboutUs} />
           <Route exact path="/art" component={ArtMain} />
-          <Route exact path="/artDepartments" component={ArtDepartment} />
-          <Route exact path="/artDetail" component={ArtDetail} />
+          <Route exact path="/art/artDepartments" component={ArtDepartment} />
+          <Route exact path="/art/artDetail" component={ArtDetail} />
           <Route exact path="/popularArtDetail" component={PopularArtDetail} />
           <Route exact path="*" component={ArtError} />
         </Switch>

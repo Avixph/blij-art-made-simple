@@ -10,9 +10,12 @@ export async function fetchArtByQuery(query) {
 }
 
 export async function fetchArtByObjectID(objectIDs) {
+  console.log(objectIDs);
   const artAPI = `${MET_URL}/public/collection/v1/objects/${objectIDs}`;
+
   const artInfo = await axios.get(artAPI).then(({ data }) => {
     return data;
   });
+  console.log(artInfo);
   return artInfo;
 }
