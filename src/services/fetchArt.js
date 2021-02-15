@@ -22,11 +22,22 @@ export async function fetchArtByDepartmentID(departmentId) {
 
 export async function fetchArtByObjectID(objectIDs) {
   console.log(objectIDs);
-  const artAPI = `${MET_URL}/public/collection/v1/objects/${objectIDs}`;
-
-  const artInfo = await axios.get(artAPI).then(({ data }) => {
-    return data;
+  const requests = objectIDs.slice(0, 10).map((objectId) => {
+    return axios.get(`${MET_URL}/public/collection/v1/objects/${objectId}`);
   });
-  console.log(artInfo);
+  // const artAPI = `${MET_URL}/public/collection/v1/objects/${objectIDs[0]}`;
+
+  const artInfo = await Promise.all(requests)
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(`${error} somethingelse`);
+    });
+  console.log(`${artInfo} something`);
   return artInfo;
 }
+
+// fetchArtByObjectID is working for depsrtments, do not change! what has to happen
+//is taking the old code that worked for search  but creating another function but just using for
+//search and leaving this for departments
