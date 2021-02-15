@@ -14,16 +14,16 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
   useEffect(() => {
     fetchDeptArtInfo();
   }, []);
-
+  console.log(`${deptArt} hello`);
   return (
     <div className="department-view">
       {deptArt.map((art, index) => {
-        return 
+        return;
       })}
       <NavLink
         to={{
           pathname: "/art/departmentCollection",
-          state: { deptName: displayName, deptObj: deptArt,  },
+          state: { deptName: displayName, deptObj: deptArt },
         }}
         onClick={fetchDeptArtInfo}
         className="button"
