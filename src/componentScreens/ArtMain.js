@@ -1,20 +1,26 @@
-import { NavLink } from "react-router-dom";
+
 import ArtSearch from "../components/ArtSearch";
 import { useState } from "react";
 import ArtSearchResults from "../components/ArtSearchResults";
+import ArtDepartment from "../components/ArtDepartment";
 
 export default function ArtMain() {
   const [searchArt, setSearchArt] = useState([]);
   console.log(searchArt);
+
+  const [showMore, setShowMore] = useState(false);
+
+  const showDepartments = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <main className="Art-Main">
-      <NavLink to="/art/artDepartments" className="button">
-        <button type="button">
-          View <br /> Departments
-        </button>
-      </NavLink>
-
       <ArtSearch setSearchArt={setSearchArt} />
+      <button onClick={showDepartments}>
+        {showMore ? "Hide Departments" : "Show Departments"}
+      </button>
+      {showMore ? <ArtDepartment /> : ""}
       {searchArt.map((art, index) => {
         return (
           <div>

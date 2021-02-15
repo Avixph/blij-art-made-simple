@@ -1,8 +1,50 @@
+import { fetchArtByDepartmentID } from "../services/fetchArt";
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 export default function ArtDepartmentResults({ displayName, departmentId }) {
+  const [deptArt, setDeptArt] = useState([]);
+
+  const fetchDeptArtInfo = async () => {
+    const data = await fetchArtByDepartmentID(departmentId);
+    console.log(data.objectIDs);
+    setDeptArt(data?.objectIDs);
+  };
+
+  useEffect(() => {
+    fetchDeptArtInfo();
+  }, []);
+
   return (
     <div className="department-view">
-      <h3>department - {departmentId}</h3>
-      <h2>{displayName}</h2>
+      {deptArt.map((art, index) => {
+        return 
+      })}
+      <NavLink
+        to={{
+          pathname: "/art/departmentCollection",
+          state: { deptName: displayName, deptObj: deptArt,  },
+        }}
+        onClick={fetchDeptArtInfo}
+        className="button"
+      >
+        <button type="button">{displayName}</button>
+      </NavLink>
+
+      {/* <NavLink
+        to={{
+          pathname: "/art/departmentCollection",
+          state: { deptName: displayName, deptObj: deptArt },
+        }}
+        onClick={fetchDeptArtInfo}
+        className="button"
+      >
+        <button type="button">{displayName}</button>
+      </NavLink> */}
+
+      {/* <button type="button" onClick={fetchDepartmentArt}>
+        {displayName}
+      </button> */}
     </div>
   );
 }

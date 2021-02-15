@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDepartments } from "../actions/deptActions";
-import ArtDepartmentResults from "../components/ArtDepartmentResults";
+import ArtDepartmentResults from "./ArtDepartmentResults";
 
 export default function ArtDepartment() {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export default function ArtDepartment() {
 
   const renderDepartments = () => {
     if (loading) {
-      return <p>Loading Departmants...</p>;
+      return <p>Loading Departments...</p>;
     }
     if (pageError) {
       return <p> errrrorrr wrong way </p>;
@@ -26,10 +26,5 @@ export default function ArtDepartment() {
     });
   };
 
-  return (
-    <section>
-      <h1>Department</h1>
-      {renderDepartments()}
-    </section>
-  );
+  return <section>{renderDepartments()}</section>;
 }
