@@ -9,6 +9,17 @@ export async function fetchArtByQuery(query) {
   return searchInfo;
 }
 
+export async function fetchArtByDepartmentID(departmentId) {
+  console.log(departmentId);
+  const deptArtAPI = `${MET_URL}/public/collection/v1/objects?departmentIds=${departmentId}`;
+
+  const deptArtInfo = await axios.get(deptArtAPI).then(({ data }) => {
+    return data;
+  });
+  console.log(deptArtInfo);
+  return deptArtInfo;
+}
+
 export async function fetchArtByObjectID(objectIDs) {
   console.log(objectIDs);
   const artAPI = `${MET_URL}/public/collection/v1/objects/${objectIDs}`;
