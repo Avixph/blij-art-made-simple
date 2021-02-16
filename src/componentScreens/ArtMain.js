@@ -1,8 +1,8 @@
-
 import ArtSearch from "../components/ArtSearch";
 import { useState } from "react";
 import ArtSearchResults from "../components/ArtSearchResults";
 import ArtDepartment from "../components/ArtDepartment";
+import lineParter from "../images/design_elements/line-parter.svg";
 
 export default function ArtMain() {
   const [searchArt, setSearchArt] = useState([]);
@@ -21,6 +21,7 @@ export default function ArtMain() {
         {showMore ? "Hide Departments" : "Show Departments"}
       </button>
       {showMore ? <ArtDepartment /> : ""}
+      <img src={lineParter} alt="" />
       {searchArt.map((art, index) => {
         return (
           <div>
