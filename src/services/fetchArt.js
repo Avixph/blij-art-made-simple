@@ -38,11 +38,13 @@ export async function fetchArtByDepartmentID(departmentId) {
 export async function fetchArtByObjectIDForDept(objectIDs) {
   console.log(objectIDs);
 
+
   const artAPI = objectIDs.slice(0, 200).map((objectId) => {
     return axios.get(`${MET_URL}/public/collection/v1/objects/${objectId}`);
   });
 
   const artInfo = await Promise.all(artAPI)
+
     .then((data) => {
       return data;
     })
@@ -52,3 +54,7 @@ export async function fetchArtByObjectIDForDept(objectIDs) {
   console.log(`${artInfo} something`);
   return artInfo;
 }
+
+// fetchArtByObjectID is working for depsrtments, do not change! what has to happen
+//is taking the old code that worked for search  but creating another function but just using for
+//search and leaving this for departments

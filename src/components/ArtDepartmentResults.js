@@ -15,6 +15,7 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
     fetchDeptArtInfo();
   }, []);
 
+
   console.log(`${deptArt} hello`);
 
   return (
@@ -25,6 +26,7 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
       <NavLink
         to={{
           pathname: "/art/departmentCollection",
+
           state: { deptName: displayName, deptObj: deptArt },
         }}
         onClick={fetchDeptArtInfo}

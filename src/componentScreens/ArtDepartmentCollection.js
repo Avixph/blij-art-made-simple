@@ -11,18 +11,22 @@ export default function ArtDepartmentCollection(props) {
   console.log(`These are the IDs: ${objectIDs}`);
 
   const fetchDeptArtInfo = async () => {
+
     const data = await fetchArtByObjectIDForDept(objectIDs);
     setDeptArtPieces(data);
     console.log(data);
+
   };
 
   useEffect(() => {
     fetchDeptArtInfo();
+    console.log(`${fetchDeptArtInfo} hello 1`);
   }, []);
 
   return (
     <div className="department-art">
       <h1>{props.location.state.deptName}</h1>
+
 
       {deptArtPieces.map((piece) => {
         console.log(piece, `hello`);
@@ -49,6 +53,7 @@ export default function ArtDepartmentCollection(props) {
                       repository: deptArt.repository,
                       URL: deptArt.objectURL,
                       galleryNumber: deptArt.GalleryNumber,
+
                     }
                   : {},
               }}
