@@ -14,15 +14,19 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
   useEffect(() => {
     fetchDeptArtInfo();
   }, []);
+
+
   console.log(`${deptArt} hello`);
+
   return (
     <div className="department-view">
-      {deptArt.map((art, index) => {
-        return;
-      })}
+      {/* {deptArt.map((art, index) => {
+        return 
+      })} */}
       <NavLink
         to={{
           pathname: "/art/departmentCollection",
+
           state: { deptName: displayName, deptObj: deptArt },
         }}
         onClick={fetchDeptArtInfo}
@@ -30,21 +34,6 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
       >
         <button type="button">{displayName}</button>
       </NavLink>
-
-      {/* <NavLink
-        to={{
-          pathname: "/art/departmentCollection",
-          state: { deptName: displayName, deptObj: deptArt },
-        }}
-        onClick={fetchDeptArtInfo}
-        className="button"
-      >
-        <button type="button">{displayName}</button>
-      </NavLink> */}
-
-      {/* <button type="button" onClick={fetchDepartmentArt}>
-        {displayName}
-      </button> */}
     </div>
   );
 }

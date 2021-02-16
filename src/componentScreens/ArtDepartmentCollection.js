@@ -1,23 +1,21 @@
 import { useState, useEffect } from "react";
-import { fetchArtByObjectID } from "../services/fetchArt";
+import { fetchArtByObjectIDForDept } from "../services/fetchArt";
 import { NavLink } from "react-router-dom";
 
 export default function ArtDepartmentCollection(props) {
   const [deptArtPieces, setDeptArtPieces] = useState([]);
 
-  const deptObjects = props.location.state.deptObj;
-  console.log(`These are the Objects: ${deptObjects}`);
-
-  const objectIDs = deptObjects.map((i) => {
-    return [i];
-  });
+  const objectIDs = props.location.state.deptObj;
+  console.log(`These are the Objects: ${objectIDs}`);
 
   console.log(`These are the IDs: ${objectIDs}`);
 
   const fetchDeptArtInfo = async () => {
-    const data = await fetchArtByObjectID(objectIDs);
+
+    const data = await fetchArtByObjectIDForDept(objectIDs);
     setDeptArtPieces(data);
-    console.log(`${data} hello error`);
+    console.log(data);
+
   };
 
   useEffect(() => {
@@ -28,31 +26,34 @@ export default function ArtDepartmentCollection(props) {
   return (
     <div className="department-art">
       <h1>{props.location.state.deptName}</h1>
+
+
       {deptArtPieces.map((piece) => {
         console.log(piece, `hello`);
-        const deptArtPiece = piece.data;
+        const deptArt = piece.data;
         return (
           <div>
-            <img src={deptArtPiece?.primaryImageSmall} alt="" />
-            <h3>{deptArtPiece?.title}</h3>
-            <h5>{deptArtPiece?.artistDisplayName}</h5>
+            <img src={deptArt?.primaryImageSmall} alt="" />
+            <h3>{deptArt?.title}</h3>
+            <h5>{deptArt?.artistDisplayName}</h5>
             <NavLink
               to={{
                 pathname: "/art/artDetail",
-                state: deptArtPiece
+                state: deptArt
                   ? {
-                      image: deptArtPiece.primaryImage,
-                      name: deptArtPiece.title,
-                      culture: deptArtPiece.culture,
-                      artist: deptArtPiece.artistDisplayName,
-                      startDate: deptArtPiece.objectBeginDate,
-                      endDate: deptArtPiece.objectEndDate,
-                      medium: deptArtPiece.medium,
-                      dimensions: deptArtPiece.dimensions,
-                      department: deptArtPiece.department,
-                      repository: deptArtPiece.repository,
-                      URL: deptArtPiece.objectURL,
-                      galleryNumber: deptArtPiece.GalleryNumber,
+                      image: deptArt.primaryImage,
+                      name: deptArt.title,
+                      culture: deptArt.culture,
+                      artist: deptArt.artistDisplayName,
+                      startDate: deptArt.objectBeginDate,
+                      endDate: deptArt.objectEndDate,
+                      medium: deptArt.medium,
+                      dimensions: deptArt.dimensions,
+                      department: deptArt.department,
+                      repository: deptArt.repository,
+                      URL: deptArt.objectURL,
+                      galleryNumber: deptArt.GalleryNumber,
+
                     }
                   : {},
               }}

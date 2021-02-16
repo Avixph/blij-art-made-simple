@@ -6,7 +6,22 @@ export async function fetchArtByQuery(query) {
   const searchInfo = await axios.get(searchAPI).then(({ data }) => {
     return data;
   });
-  return searchInfo;
+  const searchResults = {
+    ...searchInfo,
+    objectIDs: searchInfo.objectIDs.slice(0, 1500),
+  };
+  return searchResults;
+}
+
+export async function fetchArtByObjectID(objectIDs) {
+  console.log(objectIDs);
+  const artAPI = `${MET_URL}/public/collection/v1/objects/${objectIDs}`;
+
+  const artInfo = await axios.get(artAPI).then(({ data }) => {
+    return data;
+  });
+  console.log(artInfo);
+  return artInfo;
 }
 
 export async function fetchArtByDepartmentID(departmentId) {
@@ -20,14 +35,16 @@ export async function fetchArtByDepartmentID(departmentId) {
   return deptArtInfo;
 }
 
-export async function fetchArtByObjectID(objectIDs) {
+export async function fetchArtByObjectIDForDept(objectIDs) {
   console.log(objectIDs);
-  const requests = objectIDs.slice(0, 10).map((objectId) => {
+
+
+  const artAPI = objectIDs.slice(0, 200).map((objectId) => {
     return axios.get(`${MET_URL}/public/collection/v1/objects/${objectId}`);
   });
-  // const artAPI = `${MET_URL}/public/collection/v1/objects/${objectIDs[0]}`;
 
-  const artInfo = await Promise.all(requests)
+  const artInfo = await Promise.all(artAPI)
+
     .then((data) => {
       return data;
     })
