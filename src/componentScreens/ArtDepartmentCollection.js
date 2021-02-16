@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchArtByObjectIDForDept } from "../services/fetchArt";
 import { NavLink } from "react-router-dom";
+import lineParter from "../images/design_elements/line-parter.svg";
 
 export default function ArtDepartmentCollection(props) {
   const [deptArtPieces, setDeptArtPieces] = useState([]);
@@ -26,7 +27,7 @@ export default function ArtDepartmentCollection(props) {
   return (
     <div className="department-art">
       <h1>{props.location.state.deptName}</h1>
-
+      <img src={lineParter} alt="" />
 
       {deptArtPieces.map((piece) => {
         console.log(piece, `hello`);
@@ -53,7 +54,6 @@ export default function ArtDepartmentCollection(props) {
                       repository: deptArt.repository,
                       URL: deptArt.objectURL,
                       galleryNumber: deptArt.GalleryNumber,
-
                     }
                   : {},
               }}
