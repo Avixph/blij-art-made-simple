@@ -2,7 +2,6 @@ import axios from "axios";
 import { MET_URL } from "./constants";
 
 export async function fetchArtByQuery(query) {
-  // const searchAPI = `${MET_URL}/public/collection/v1/search?hasImages=true&q=${query}`;
   const searchAPI = `${MET_URL}/public/collection/v1/search?hasImages=true&q=${query}`;
   const searchInfo = await axios.get(searchAPI).then(({ data }) => {
     return data;
