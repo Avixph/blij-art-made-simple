@@ -12,11 +12,9 @@ export default function ArtDepartmentCollection(props) {
   console.log(`These are the IDs: ${objectIDs}`);
 
   const fetchDeptArtInfo = async () => {
-
     const data = await fetchArtByObjectIDForDept(objectIDs);
     setDeptArtPieces(data);
     console.log(data);
-
   };
 
   useEffect(() => {
@@ -26,14 +24,16 @@ export default function ArtDepartmentCollection(props) {
 
   return (
     <div className="department-art">
+
       <h1>{props.location.state.deptName}</h1>
       <img src={lineParter} alt="" />
+
 
       {deptArtPieces.map((piece) => {
         console.log(piece, `hello`);
         const deptArt = piece.data;
         return (
-          <div>
+          <div className="dept_info">
             <img src={deptArt?.primaryImageSmall} alt="" />
             <h3>{deptArt?.title}</h3>
             <h5>{deptArt?.artistDisplayName}</h5>

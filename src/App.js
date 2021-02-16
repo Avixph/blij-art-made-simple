@@ -1,12 +1,10 @@
 import "./App.css";
-
 import { Route, Switch } from "react-router-dom";
 import Header from "./componentScreens/Header";
 import Home from "./componentScreens/Home";
 import AboutUs from "./componentScreens/Home";
 import ArtMain from "./componentScreens/ArtMain";
 import ArtDepartmentCollection from "./componentScreens/ArtDepartmentCollection";
-
 import PopularArtDetail from "./componentScreens/PopularArtDetail";
 import ArtDetail from "./componentScreens/ArtDetail";
 import Footer from "./componentScreens/Footer";
@@ -31,6 +29,7 @@ function App() {
           <Route exact path="*" component={ArtError} />
         </Switch>
       </main>
+
       <Footer />
     </div>
   );

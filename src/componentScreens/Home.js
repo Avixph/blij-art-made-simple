@@ -4,6 +4,7 @@ import PopularArtDetail from "./PopularArtDetail";
 import lineParter from "../images/design_elements/line-parter.svg";
 
 export default function Home() {
+
   // const [showPopArt, setShowPopArt] = useState([]);
 
   // const fetchPopArt = async () => {
@@ -34,4 +35,5 @@ export default function Home() {
       <img src={lineParter} alt="" />
     </div>
   );
+
 }
