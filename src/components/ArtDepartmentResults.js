@@ -15,14 +15,10 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
     fetchDeptArtInfo();
   }, []);
 
-
   console.log(`${deptArt} hello`);
 
   return (
     <div className="department-view">
-      {/* {deptArt.map((art, index) => {
-        return 
-      })} */}
       <NavLink
         to={{
           pathname: "/art/departmentCollection",
