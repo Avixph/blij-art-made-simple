@@ -1,6 +1,7 @@
 import { fetchArtByObjectID } from "../services/fetchArt";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import "../css/popArt.css";
 
 export default function PopularArtCollection(props) {
   const [popArtPieces, setPopArtPieces] = useState([]);
@@ -18,9 +19,16 @@ export default function PopularArtCollection(props) {
 
   return (
     <div className="popular-art">
-      <img src={popArtPieces?.primaryImageSmall} alt="" />
-      <h3>{popArtPieces?.title}</h3>
-      <h5>{popArtPieces?.artistDisplayName}</h5>
+      <img
+        className="popArt_img"
+        src={popArtPieces?.primaryImageSmall}
+        alt=""
+      />
+
+      <h3 className="popArt_title">{popArtPieces?.title}</h3>
+
+      <h5 className="popArt_para">{popArtPieces?.artistDisplayName}</h5>
+
       <NavLink
         to={{
           pathname: "/art/artDetail",
@@ -42,7 +50,7 @@ export default function PopularArtCollection(props) {
             : {},
         }}
       >
-        <button type="button">
+        <button className="popArt_bttn" type="button">
           View <br /> Details
         </button>
       </NavLink>

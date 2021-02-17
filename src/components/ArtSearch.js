@@ -18,14 +18,14 @@ export default function ArtSearch({ setSearchArt }) {
 
   return (
     <div>
-      <form>
+      <form className="search-bar">
         <input
           value={search}
           onChange={handleSearchInput}
           placeholder="search for artist name, art title, culture, department, etc.  "
         />
-        <button type="submit" onClick={handleSearchSubmit}>
-          Search ➤
+        <button type="submit" onClick={handleSearchSubmit} className="search-bttn">
+          ➤
         </button>
       </form>
     </div>

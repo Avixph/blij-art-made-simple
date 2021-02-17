@@ -1,0 +1,86 @@
+:root {
+  --background-color: #efebdd;
+  --box-color: #b0371c;
+  --nav-color: #b3773b;
+  --coper_color: #c3874d;
+  --rich-black-textcolor: #010504;
+  --independence-color: #445474;
+  --var_red_1: #c86048;
+  --var_red_2: #d3846b;
+  --var_red_3: #dda98e;
+  --var_red_4: #e7c6b0;
+  --var_red_5: #f4e5dc;
+
+  --title_font: "Noto Sans TC", sans-serif;
+  --para_font: "Lato", sans-serif;
+  --shadow_1: 2px 2px 2px #00000031, -6px -6px 9px #a3a0a013;
+  --shadow-inset: inset 6px 6px 9px #00000031, inset -6px -6px 9px #a3a0a025;
+}
+
+.popular-art {
+  margin: 0;
+  margin-top: -100px;
+}
+
+.popArt_title {
+  font-size: 20px;
+  font-weight: 900;
+}
+.popArt_img {
+  position: relative;
+  height: auto;
+  width: 30%;
+}
+.popArt_para {
+  font-size: 15px;
+  font-weight: 900;
+}
+.popArt_bttn {
+  padding: 0px 20px;
+  position: relative;
+  right: -105px;
+  background-color: var(--background-color);
+  color: var(--independence-color);
+  border: 2px solid var(--coper_color);
+  transition-duration: 0.2s;
+  box-shadow: var(--shadow_1);
+}
+.popArt_bttn:hover {
+  background-color: var(--coper_color);
+  color: var(--background-color);
+}
+.scrollableDiv {
+  position: relative;
+  top: 428px;
+  right: -868px;
+}
+/* .line_parter {
+  width: 710px;
+  height: auto;
+  position: absolute;
+  top: 309px;
+  right: -620px;
+} */
+
+.banner {
+  margin: 0 auto;
+  width: 734px;
+  height: auto;
+  position: absolute;
+  top: 110px;
+  left: 687px;
+}
+.popArt_title_1 {
+  position: absolute;
+  top: 398px;
+  left: 730px;
+  font-family: var(--title_font);
+  font-weight: 900;
+}
+.popArt_para_1 {
+  position: absolute;
+  top: 430px;
+  left: 732px;
+  font-family: var(--para_font);
+  font-weight: 900;
+}

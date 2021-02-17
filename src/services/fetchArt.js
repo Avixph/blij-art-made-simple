@@ -10,7 +10,7 @@ export async function fetchArtByQuery(query) {
   });
   const searchResults = {
     ...searchInfo,
-    objectIDs: searchInfo.objectIDs.slice(0, 1500),
+    objectIDs: searchInfo.objectIDs.slice(0, 800),
   };
   return searchResults;
 }
@@ -78,7 +78,7 @@ export async function fetchPopularArt() {
 
   const PopularSearchResults = {
     ...PopularSearchInfo,
-    objectIDs: PopularSearchInfo.objectIDs.slice(0, 10),
+    objectIDs: PopularSearchInfo.objectIDs.slice(0, 500),
   };
   // console.log(PopularSearchResults);
   return PopularSearchResults;

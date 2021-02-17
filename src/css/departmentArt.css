@@ -1,0 +1,66 @@
+:root {
+  --background-color: #efebdd;
+  --box-color: #b0371c;
+  --nav-color: #b3773b;
+  --coper_color: #c3874d;
+  --rich-black-textcolor: #010504;
+  --independence-color: #445474;
+  --var_red_1: #c86048;
+  --var_red_2: #d3846b;
+  --var_red_3: #dda98e;
+  --var_red_4: #e7c6b0;
+  --var_red_5: #f4e5dc;
+
+  --title_font: "Noto Sans TC", sans-serif;
+  --para_font: "Lato", sans-serif;
+  --shadow_1: 2px 2px 2px #00000031, -6px -6px 9px #a3a0a013;
+  --shadow-inset: inset 6px 6px 9px #00000031, inset -6px -6px 9px #a3a0a025;
+}
+.department-art h1 {
+  position: relative;
+  top: -15px;
+  left: 790px;
+}
+.department-art {
+  position: absolute;
+  top: 150px;
+  left: 90px;
+}
+.scrollableDiv3 {
+  position: relative;
+  top: 38px;
+  left: 748px;
+}
+.dept_img_1 {
+  position: relative;
+  height: auto;
+  width: 80%;
+  left: -20px;
+}
+.title_dept_1 {
+  top: 398px;
+  left: 200px;
+  font-family: var(--title_font);
+  font-weight: 900;
+}
+
+.para_dept_1 {
+  top: 430px;
+  left: 200px;
+  font-family: var(--para_font);
+  font-weight: 900;
+}
+.dept-c-bttn {
+  padding: 0px 40px;
+  position: relative;
+  left: 85px;
+  background-color: var(--background-color);
+  color: var(--independence-color);
+  border: 2px solid var(--coper_color);
+  transition-duration: 0.2s;
+  box-shadow: var(--shadow_1);
+}
+.dept-c-bttn:hover {
+  background-color: var(--coper_color);
+  color: var(--background-color);
+}

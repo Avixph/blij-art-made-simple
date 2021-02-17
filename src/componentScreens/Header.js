@@ -1,14 +1,11 @@
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos/blij-logo.svg";
-// import "../css/header.css";
+import "../css/header.css";
 export default function Header() {
   return (
     <header className="Navlink">
-      <div className="slogan">
-        <p>Art Made Simple</p>
-      </div>
       <div className="bckgrnd_red_box">
-        <img src={logo} alt="" />
+        <img className="logo" src={logo} alt="" />
       </div>
 
       <nav>
