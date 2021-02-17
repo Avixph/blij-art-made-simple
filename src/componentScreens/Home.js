@@ -1,17 +1,13 @@
-// import { useState, useEffect } from "react";
+import "../css/popArt.css";
 
-// import PopularArtCollection from "./PopularArtCollection";
-// import { fetchPopularArt } from "../services/fetchArt";
-import lineParter from "../images/design_elements/line-parter.svg";
 import PopularArtResults from "../components/PopularArtResults";
+import banner from "../images/design_elements/home-banner.svg";
 
 export default function Home() {
   return (
     <div>
-      <h1>Art Made Simple</h1>
-      <h3>Popular Peices</h3>
-      <h5>explore peices on view</h5>
-      <img src={lineParter} alt="" />
+      <img src={banner} alt="home banner" className="banner" />
+
       <PopularArtResults />
     </div>
   );

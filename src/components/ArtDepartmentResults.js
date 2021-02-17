@@ -1,7 +1,7 @@
 import { fetchArtByDepartmentID } from "../services/fetchArt";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
+import "../css/artMain.css";
 export default function ArtDepartmentResults({ displayName, departmentId }) {
   const [deptArt, setDeptArt] = useState([]);
 
@@ -15,8 +15,6 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
     fetchDeptArtInfo();
   }, []);
 
-  console.log(`${deptArt} hello`);
-
   return (
     <div className="department-view">
       <NavLink
@@ -26,9 +24,11 @@ export default function ArtDepartmentResults({ displayName, departmentId }) {
           state: { deptName: displayName, deptObj: deptArt },
         }}
         onClick={fetchDeptArtInfo}
-        className="button"
+        className="dept_button"
       >
-        <button type="button">{displayName}</button>
+        <button className="depts_bttn" type="button">
+          {displayName}
+        </button>
       </NavLink>
     </div>
   );

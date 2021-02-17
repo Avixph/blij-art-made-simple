@@ -1,0 +1,52 @@
+.title-au {
+  position: relative;
+  left: 690px;
+}
+
+.team-members {
+  width: 300px;
+  height: 300px;
+}
+
+.main1 {
+  position: absolute;
+  right: -200px;
+  width: 300px;
+  height: auto;
+}
+
+.main {
+  position: absolute;
+  top: 167px;
+  left: 1100px;
+  width: 300px;
+  height: 300px;
+}
+.link1 {
+  position: absolute;
+  right: -110px;
+  width: 90px;
+  top: 380px;
+  height: auto;
+}
+.git1 {
+  position: absolute;
+  right: -310px;
+  width: 90px;
+  top: 380px;
+  height: auto;
+}
+.git {
+  position: absolute;
+  right: -860px;
+  width: 90px;
+  top: 490px;
+  height: auto;
+}
+.link {
+  position: absolute;
+  right: -1100px;
+  width: 90px;
+  top: 490px;
+  height: auto;
+}

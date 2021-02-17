@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchArtByObjectID } from "../services/fetchArt";
 import { NavLink } from "react-router-dom";
 
+import "../css/artMain.css";
 export default function ArtSearchResults({ objectIDs }) {
   const [artPiece, setArtPiece] = useState([]);
 
@@ -18,9 +19,9 @@ export default function ArtSearchResults({ objectIDs }) {
 
   return (
     <div className="ArtSearch">
-      <img src={artPiece?.primaryImageSmall} alt="" />
-      <h3>{artPiece?.title}</h3>
-      <h5>{artPiece?.artistDisplayName}</h5>
+      <img className="artSearch_1" src={artPiece?.primaryImageSmall} alt="" />
+      <h3 className="artSearch_2">{artPiece?.title}</h3>
+      <h5 className="artSearch_3">{artPiece?.artistDisplayName}</h5>
       <NavLink
         to={{
           pathname: "/art/artDetail",
@@ -42,7 +43,7 @@ export default function ArtSearchResults({ objectIDs }) {
             : {},
         }}
       >
-        <button type="button">
+        <button className="artSearch_bttn" type="button">
           View <br /> Details
         </button>
       </NavLink>
