@@ -25,7 +25,6 @@ export default function ArtMain() {
       {searchArt.map((art, index) => {
         return (
           <div>
-            {/* <h1>{art}</h1> */}
             <ArtSearchResults objectIDs={art} key={index} />
           </div>
         );
