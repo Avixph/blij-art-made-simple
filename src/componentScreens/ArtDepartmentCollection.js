@@ -24,10 +24,8 @@ export default function ArtDepartmentCollection(props) {
 
   return (
     <div className="department-art">
-
       <h1>{props.location.state.deptName}</h1>
       <img src={lineParter} alt="" />
-
 
       {deptArtPieces.map((piece) => {
         console.log(piece, `hello`);

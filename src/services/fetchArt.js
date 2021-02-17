@@ -72,6 +72,7 @@ export async function fetchPopularArt() {
   const PopularSearchInfo = await axios
     .get(PopularSearchAPI2)
     .then(({ data }) => {
+      console.log(data);
       return data;
     });
 
@@ -79,7 +80,7 @@ export async function fetchPopularArt() {
     ...PopularSearchInfo,
     objectIDs: PopularSearchInfo.objectIDs.slice(0, 10),
   };
-  console.log(PopularSearchResults);
+  // console.log(PopularSearchResults);
   return PopularSearchResults;
 }
 

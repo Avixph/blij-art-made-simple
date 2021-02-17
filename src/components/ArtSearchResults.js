@@ -18,10 +18,6 @@ export default function ArtSearchResults({ objectIDs }) {
 
   return (
     <div className="ArtSearch">
-      {/* <img
-        src={artPiece.primaryImage ? artPiece.primaryImage : "no Image"}
-        alt=""
-      /> */}
       <img src={artPiece?.primaryImageSmall} alt="" />
       <h3>{artPiece?.title}</h3>
       <h5>{artPiece?.artistDisplayName}</h5>
