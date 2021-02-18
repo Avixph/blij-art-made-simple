@@ -7,7 +7,6 @@ import ArtMain from "./componentScreens/ArtMain";
 import ArtDepartmentCollection from "./componentScreens/ArtDepartmentCollection";
 import ArtDetail from "./componentScreens/ArtDetail";
 import Footer from "./componentScreens/Footer";
-import ArtError from "./componentScreens/ArtError";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
             component={ArtDepartmentCollection}
           />
           <Route exact path="/art/artDetail" component={ArtDetail} />
-          <Route exact path="*" component={ArtError} />
         </Switch>
       </main>
 
