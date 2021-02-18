@@ -80,19 +80,6 @@ export async function fetchPopularArt() {
     ...PopularSearchInfo,
     objectIDs: PopularSearchInfo.objectIDs.slice(0, 500),
   };
-  // console.log(PopularSearchResults);
+
   return PopularSearchResults;
 }
-
-// export async function fetchArtByObjectID(objectIDs) {
-//   console.log(objectIDs);
-//   const artAPI = `${MET_URL}/public/collection/v1/objects/${objectIDs}`;
-
-//   const artInfo = await axios.get(artAPI).then(({ data }) => {
-//     return data;
-//   });
-//   console.log(artInfo);
-//   return artInfo;
-// }
-
-// --------------------------------------------------------------------------------------------------------------------------
